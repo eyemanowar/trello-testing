@@ -1,0 +1,48 @@
+Running BrowserMob Proxy using LittleProxy implementation. To revert to the legacy implementation, run the proxy with the command-line option '--use-littleproxy false'.
+[INFO  2022-11-14T12:28:58,492 net.lightbody.bmp.proxy.Main] (main) Starting BrowserMob Proxy version 2.1.4 
+[INFO  2022-11-14T12:28:58,558 org.eclipse.jetty.util.log] (main) jetty-7.x.y-SNAPSHOT 
+[INFO  2022-11-14T12:28:58,659 org.eclipse.jetty.util.log] (main) started o.e.j.s.ServletContextHandler{/,null} 
+[WARN  2022-11-14T12:28:58,931 org.eclipse.jetty.util.log] (main) FAILED SelectChannelConnector@0.0.0.0:8080: java.net.BindException: Address already in use 
+[WARN  2022-11-14T12:28:58,931 org.eclipse.jetty.util.log] (main) FAILED org.eclipse.jetty.server.Server@75cd8043: java.net.BindException: Address already in use 
+[ERROR 2022-11-14T12:28:58,932 net.lightbody.bmp.proxy.Main] (main) Failed to start Jetty server. Aborting. java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_351]
+	at sun.nio.ch.Net.bind(Net.java:438) ~[?:1.8.0_351]
+	at sun.nio.ch.Net.bind(Net.java:430) ~[?:1.8.0_351]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225) ~[?:1.8.0_351]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_351]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:162) ~[browsermob-dist-2.1.4.jar:?]
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:356) ~[browsermob-dist-2.1.4.jar:?]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:240) ~[browsermob-dist-2.1.4.jar:?]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:55) ~[browsermob-dist-2.1.4.jar:?]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:269) ~[browsermob-dist-2.1.4.jar:?]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:55) ~[browsermob-dist-2.1.4.jar:?]
+	at net.lightbody.bmp.proxy.Main.main(Main.java:64) [browsermob-dist-2.1.4.jar:?]
+
+Exception in thread "main" net.lightbody.bmp.exception.JettyException: Unable to start Jetty server
+	at net.lightbody.bmp.proxy.Main.main(Main.java:68)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:438)
+	at sun.nio.ch.Net.bind(Net.java:430)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:162)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:356)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:240)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:55)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:269)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:55)
+	at net.lightbody.bmp.proxy.Main.main(Main.java:64)
+ transport 
+[INFO  2022-11-14T12:28:57,259 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp24293395-20) Proxy started at address: /0:0:0:0:0:0:0:0:8085 
+[WARN  2022-11-14T12:28:59,140 net.lightbody.bmp.mitm.util.SslUtil] (LittleProxy-4-ClientToProxyWorker-0) Disabling upstream server certificate verification. This will allow attackers to intercept communications with upstream servers. 
+[INFO  2022-12-04T10:46:02,190 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2022-12-04T10:46:02,190 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2022-12-04T10:46:02,190 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2022-12-04T10:46:02,190 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2022-12-04T10:46:02,190 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2022-12-04T10:46:02,206 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
+[INFO  2022-12-04T10:46:02,206 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
+[INFO  2022-12-04T10:46:02,208 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
+[INFO  2022-12-04T10:46:02,208 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
+[INFO  2022-12-04T10:46:02,208 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
