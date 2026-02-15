@@ -7,4 +7,4 @@ export TRELLO_TOKEN=['your token']
 export TRELLO_LOGIN=['your login']
 export TRELLO_PASSWORD=['your password']
 
-export ORG_ID=636e9d44bd5dd6011e5ff563
+export ORG_ID=['your org id']
